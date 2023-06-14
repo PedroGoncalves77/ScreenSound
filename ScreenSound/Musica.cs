@@ -9,7 +9,7 @@ namespace ScreenSound
         }
 
         public string Nome { get; set; }
-		public string Artista { get; set; }
+		public Banda Artista { get; set; }
 		public int DuracaoEmSegundos { get; set; }
 		public bool Disponivel { get; set; }
 		public string NomeCompleto { get; set; }

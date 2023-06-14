@@ -1,7 +1,11 @@
-﻿namespace ScreenSound
+﻿using System.Reflection;
+
+namespace ScreenSound
 {
     public class Album
     {
+       public Dictionary<Genero,Banda> Algo = new Dictionary<Genero,Banda>();
+        
         private List<Musica> musicas = new List<Musica>();
         public string Nome { get; set; }
         public int DuracaoTotal => musicas.Sum(m => m.DuracaoEmSegundos);
@@ -10,6 +14,7 @@
 
         public void ExibirMusicasDoAlbum() 
         {
+            
             Console.WriteLine($"As musicas do Album {Nome} são:\n");
             foreach(var musica in musicas) 
             {
