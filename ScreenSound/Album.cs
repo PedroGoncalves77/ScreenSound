@@ -4,10 +4,14 @@ namespace ScreenSound
 {
     public class Album
     {
-       public Dictionary<Genero,Banda> Algo = new Dictionary<Genero,Banda>();
-        
+        public Album(string nome)
+        {
+            Nome = nome;
+
+        }
+
         private List<Musica> musicas = new List<Musica>();
-        public string Nome { get; set; }
+        public string Nome { get; }
         public int DuracaoTotal => musicas.Sum(m => m.DuracaoEmSegundos);
 
         public void AdicionarMusica(Musica musica) => musicas.Add(musica);
