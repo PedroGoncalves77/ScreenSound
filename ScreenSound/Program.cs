@@ -7,6 +7,10 @@ namespace ScreenSound
     {
         static void Main(string[] args) 
         {
+            var Episodio ep1 = new(1, "Nome do ep1", 45);
+            ep1.AdicionarConvidado("Convidado0");
+            ep1.AdicionarConvidado("Convidado1");
+            ep1.AdicionarConvidado("Convidado3");
             var banda1 = new Banda("Nome da banda 1");
             
             var musica1 = new Musica("Nome da musica 1", banda1);
