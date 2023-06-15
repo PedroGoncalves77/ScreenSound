@@ -7,10 +7,28 @@ namespace ScreenSound
     {
         static void Main(string[] args) 
         {
-            var Episodio ep1 = new(1, "Nome do ep1", 45);
+            Episodio ep2 = new(2, "Nome do ep1", 45);
+            ep2.AdicionarConvidado("Convidado0");
+            ep2.AdicionarConvidado("Convidado1");
+            ep2.AdicionarConvidado("Convidado3");
+
+            Episodio ep3 = new(3, "Nome do ep2", 35);
+            ep3.AdicionarConvidado("Convidado0");
+            ep3.AdicionarConvidado("Convidado1");
+            ep3.AdicionarConvidado("Convidado3");
+
+            Episodio ep1 = new(1, "Nome do ep3", 77);
             ep1.AdicionarConvidado("Convidado0");
             ep1.AdicionarConvidado("Convidado1");
             ep1.AdicionarConvidado("Convidado3");
+
+            Podcast podcast = new("Nome do podcast", "Nome do apresentador");
+            podcast.AdicionarEpisodio(ep1);
+            podcast.AdicionarEpisodio(ep2);
+            podcast.AdicionarEpisodio(ep3);
+            podcast.ExibirDetalhesDoPodcast();
+
+
             var banda1 = new Banda("Nome da banda 1");
             
             var musica1 = new Musica("Nome da musica 1", banda1);
